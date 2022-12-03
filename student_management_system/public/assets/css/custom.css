@@ -1,0 +1,321 @@
+@media only screen and (max-width: 576px)  {
+    .card-header>h4.card-title{
+        font-size: 1rem;
+    }
+}
+[ng-popover] .popover { display: none; }
+/*---------------------- table -------------------------- */
+.table thead tr th {
+    font-weight: bold;
+}
+.table thead tr th {
+    font-size: .7rem;
+}
+.table>tbody>tr>td{
+    padding: 8px 4px;
+}
+/*---------------------- table -------------------------- */
+
+/*---------------------- width --------------------------*/
+.px140{ width: 140px; }
+.px130{ width: 130px; }
+.px120{ width: 120px; }
+.px110{ width: 110px; }
+.px100{ width: 100px; }
+.px90{ width: 90px; }
+.px80{ width: 80px; }
+.px70{ width: 70px; }
+.px60{ width: 60px; }
+.px50{ width: 50px; }
+.px40{ width: 40px; }
+/*---------------------- End of width --------------------------*/
+
+/*--------------------- spinner---------------------- */
+
+@keyframes spinner-border {
+    to { transform: rotate(360deg); }
+}
+
+.spinner-border {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    border: .25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border .75s linear infinite;
+}
+
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: .2rem;
+}
+
+
+@keyframes spinner-grow {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.spinner-grow {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    background-color: currentColor;
+    border-radius: 50%;
+    opacity: 0;
+    animation: spinner-grow .75s linear infinite;
+}
+
+.spinner-grow-sm {
+    width: 1rem;
+    height: 1rem;
+}
+/*------------------- end of spinner ---------------------*/
+.close:focus{
+    outline: 0;
+}
+/*------------------- Important ----------------------*/
+.table .form-check .form-check-sign.inline {
+    top: 0px;
+}
+
+.date-holder {
+    display: none;
+}
+tr input, tr select{
+    width: 100%;
+    height: 30px;
+}
+/*------------------- End of Important ----------------------*/
+.message.card .card-actions {
+    top: 0px;
+    left: auto;
+    right: 0px;
+    text-align: right;
+    width: fit-content;
+}
+.own{
+    background-color: #e6e6e6;
+}
+.ghostwhite {
+    background-color: ghostwhite;
+}
+.lightpink{
+    background-color: lightpink;
+}
+.lavender{
+    background-color: lavender;
+}
+.lightgray{
+    background-color: lightgray;
+}
+.lightblue{
+    background-color: lightblue;
+}
+.box-tools{
+    top: 0px;
+    left: auto;
+    right: 0px;
+    text-align: right;
+    position: absolute;
+    z-index: 1;
+    /* width: calc(100% - 30px); */
+}
+.box-tools .material-icons {
+    color: #fff!important;
+    padding: .5rem!important;
+}
+
+/* ---------------- Timeline --------------- */
+.timeline li .user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 16px;
+    z-index: 100;
+    position: absolute;
+    overflow: hidden;
+}
+
+.timeline li .user-photo img {
+    width: 100%;
+}
+
+.timeline-panel .card-footer {
+    border-top: 1px solid #e7e7e7;
+    padding: 0px;
+    margin: 0px;
+    margin-top: .25rem !important;
+}
+
+.timeline-panel .card-title {
+    text-align: left;
+    font-size: .9em;
+    color: crimson;
+    margin-bottom: 0px;
+}
+.timeline-panel>.timestamp {
+    color: #999;
+    font-size: 12px;
+    line-height: 7px;
+    text-align: right;
+    margin-top: 2px;
+}
+
+.timeline-panel .timeline-body{
+    text-align: left;
+}
+.timeline-panel>.timeline-body>p>span{
+    color: #17c9e2;
+}
+/* ---------------- End of Timeline --------------- */
+
+.card-profile p{
+    color: #999;
+    margin-bottom: 0rem;
+}
+
+table.table-bordered thead tr{
+    border-top: 1px solid #ddd;
+}
+
+/* ---------------- responsive issues --------------- */
+
+@media screen and (max-width: 576px) {
+    .main-panel>.content {
+        padding: 5px;
+        /* margin-top: 35px; */
+    }
+    .container-fluid {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+    .card [class*=card-header-] .card-icon{
+        padding: 4px;
+        font-size: x-large;
+    }
+    .card .card-body {
+        padding: 14px 12px;
+    }
+    .card .card-body .form-group {
+        margin: 1px 0 0;
+    }
+    .card .card-body+.card-footer, .card .card-footer {
+        padding-top: 3px;
+    }
+    .card [class*=card-header-]:not(.card-header-icon):not(.card-header-text):not(.card-header-image) {
+        padding: 10px;
+    }
+    .table>tbody>tr>td, .table>thead>tr>th {
+        padding: 6px 6px;
+    }
+    .form-group {
+        padding-bottom: 5px;
+    }
+}
+.dash-icon{
+    border-radius: 50%;
+    background-color: white;
+}
+/*------------------------- table-card -------------------------------*/
+
+
+/*------------------------- Table-card -------------------------------*/
+@media (max-width:576px) {
+    .table-card>thead {
+        display: none;
+    }
+    .table-card,
+    .table-card>tbody,
+    .table-card>tbody>tr,
+    .table-card>tbody>tr>td {
+        display: block;
+    }
+    .table-card>tbody>tr>td::before {
+        content: attr(label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        text-align: left;
+    }
+    .table-card>tbody>tr>td{
+        text-align: left;
+        padding-left: 50% !important;
+        border: none;
+        border-bottom: 1px solid #f1f1f1;
+        min-height: 35px;
+    }
+    .table-card>tbody>tr{
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+        background-color: white;
+        border-radius: 2px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid #ececec;
+    }
+    .table-card>tbody{
+        /*position: absolute;*/
+    }
+}
+/*------------------------- End of Table-card -------------------------------*/
+
+/*------------ Bottom Right Modal ----------------------*/
+.modal.bottom-right-modal>.modal-dialog {
+    width:95%;
+    position:fixed;
+    bottom:0;
+    right:0;
+    margin:0;
+    margin-right:5px !important;
+    margin-left:15px !important;
+    margin-bottom:5px !important;
+}
+.modal.bottom-right-modal>.modal-dialog .modal-header {
+    border-bottom: none;
+    padding-bottom: 15px !important;
+    background-color: #952cae !important;
+    color: white !important;
+    font-weight: 400;
+}
+/*---------- End of Bottom Right Modal -------------------*/
+
+.call_icon {
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding:15px;
+}
+.call_number        {
+    height: 50px;
+    float: left;
+    font-size: 14px;
+    color: black;
+    padding:15px;
+}
+.card1 {
+    margin-top:10px !important;
+    margin-bottom:12px !important;
+}
+
+/*---------- User based display -------------------*/
+.staff .d-customer{
+    display: none;
+}
+.customer .d-staff{
+    display: none;
+}
+
+/*---------- select2 dropdown-------------------*/
+span.select2{
+    width: 100%!important;
+}
+/*---------- End select2 dropdown-------------------*/

@@ -1,0 +1,96 @@
+.visa-form .form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #6cc091;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0px;
+}
+
+.visa-form .form-control:focus {
+    background-color: azure;
+}
+
+.visa-form {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.visa-form h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #444;
+    letter-spacing: -.015em;
+    font-weight: 700;
+    line-height: 1.375;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.modal-footer {
+    border-top: 0px solid #dee2e6;
+}
+
+.visa-form p {
+    margin-bottom: 0px;
+}
+
+.confirm p {
+    color: #626263;
+    font-family: 'Livvic', sans-serif;
+}
+
+.form-group {
+    margin-bottom: .7rem;
+}
+
+.btn-nav {
+    width: 180px;
+    /*to make all next and previous button same size*/
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/* End of Hide scrollbar */
+hr {
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+}
+
+.visa-form 
+.form-control.invalid,
+.input-group.invalid,
+.form-control-file.invalid,
+.custom-file-input.invalid,
+.custom-file-label.invalid {
+    border-bottom: 1px solid #dc3545;
+    background: #ffefef;
+}
+
+.visa-form 
+.form-control.valid,
+.input-group.valid,
+.form-control-file.valid,
+.custom-file-input.valid,
+.custom-file-label.valid {
+    border-bottom: 1px solid #24d21d;
+    background: #c5f9bd;
+}
+
+.invalid-feedback {
+    display: block;
+}
+.card.p-1{
+    max-width: 150px;
+}

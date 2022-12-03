@@ -1,9 +1,30 @@
 <div class="sidebar-wrapper">
     <div class="user">
         <div class="photo">
-{{--            <img class="avatar" @auth src="{{ Auth::user()->avatar_thumb }}" @else src="{{ asset('uploads/avatar/default.jpg') }}" @endauth/>--}}
+            <img class="avatar" @auth src="{{ Auth::user()->avatar_thumb }}" @else src="{{ asset('uploads/avatar/default.jpg') }}" @endauth/>
         </div>
-
+        <div class="user-info">
+            <a data-toggle="collapse" href="#collapseExample" class="username">
+                <span> Hi, User<b class="caret"></b></span>
+            </a>
+            <div class="collapse" id="collapseExample">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('profile') }}">
+                            <span class="sidebar-mini"> MP </span>
+                            <span class="sidebar-normal"> My Profile </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                            <span class="sidebar-mini"> LO </span>
+                            <span class="sidebar-normal"> Log Out </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
     <ul class="nav">
         <li class="nav-item">
@@ -12,40 +33,40 @@
                 <p>Dashboard</p>
             </a>
         </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#sidebar-collapse-admin-dashboard">
-                    <i class="material-icons">dashboard</i>
-                    <p>Dashboard<b class="caret"></b></p>
-                </a>
-                <div class="collapse" id="sidebar-collapse-admin-dashboard">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('dashboard?admin_dashboard&operation_dashboard') }}">
-                                <span class="sidebar-mini">OD</span>
-                                <span class="sidebar-normal">Operation Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('dashboard?admin_dashboard&translation_dashboard') }}">
-                                <span class="sidebar-mini">TD</span>
-                                <span class="sidebar-normal">Translation Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('dashboard?admin_dashboard&attestation_dashboard') }}">
-                                <span class="sidebar-mini">AD</span>
-                                <span class="sidebar-normal">Attestation Dashboard</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('company_documents') }}">
-                    <i class="material-icons">library_books</i>
-                    <p>Company Documents</p>
-                </a>
-            </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#sidebar-collapse-admin-dashboard">
+                <i class="material-icons">Students</i>
+                <p>Dashboard<b class="caret"></b></p>
+            </a>
+            <div class="collapse" id="sidebar-collapse-admin-dashboard">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('dashboard?admin_dashboard&operation_dashboard') }}">
+                            <span class="sidebar-mini">OD</span>
+                            <span class="sidebar-normal">Operation Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('dashboard?admin_dashboard&translation_dashboard') }}">
+                            <span class="sidebar-mini">TD</span>
+                            <span class="sidebar-normal">Translation Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('dashboard?admin_dashboard&attestation_dashboard') }}">
+                            <span class="sidebar-mini">AD</span>
+                            <span class="sidebar-normal">Attestation Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('company_documents') }}">
+                <i class="material-icons">library_books</i>
+                <p>Company Documents</p>
+            </a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tablesExamples">
                 <i class="material-icons">people</i>
@@ -75,7 +96,6 @@
                 </ul>
             </div>
         </li>
-        @endpermits
     </ul>
 </div>
 
