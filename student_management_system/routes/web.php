@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () { return redirect('students'); });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('students', 'students');
+//Route::middleware('auth')->group(function () {
+//    Route::view('students', 'students');
+//});
+
