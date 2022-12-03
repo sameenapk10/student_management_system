@@ -38,6 +38,7 @@ class StudentsController extends ResourceController
             'gender' => 'required|string',
             'status' => 'required|string',
             'reporting_teacher' => 'required|string',
+            'remarks' => 'nullable|string',
         ];
         $request->validate($validationRules);
         $student->fill($request->all());

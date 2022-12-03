@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', function () { return redirect('dashboard'); });
 
-Route::view('students', 'students');
+Route::view('students', 'students.students');
 Route::view('dashboard', 'dashboard');
 
 //Route::middleware('auth')->group(function () {

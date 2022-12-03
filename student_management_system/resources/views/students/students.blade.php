@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </div>
-{{--            @include('pcc.pcc_more')--}}
+            @include('students.students_more')
         </div>
         <div class="card">
             <div class="card-header card-header-primary">
@@ -86,7 +86,6 @@
                     <table class="table table-card">
                         <thead>
                         <tr>
-                            <th>Sl.No</th>
                             <th>Student Id</th>
                             <th>Name</th>
                             <th>Age</th>
@@ -99,7 +98,6 @@
                         </thead>
                         <tbody>
 {{--                        <tr>--}}
-{{--                            <td label="Sl.no"></td>--}}
 {{--                            <td label="id"></td>--}}
 {{--                            <td label="Check No"><input type="text" class="form-control" ng-model="add_student.name"></td><!-- name -->--}}
 {{--                            <td label="Amount"><input type="text" class="form-control" ng-model="add_student.age"></td><!-- details -->--}}
@@ -109,7 +107,6 @@
 {{--                            <td label=""><a href="#" ng-click="save($event, check_bounce)"><i class="material-icons">add_circle</i></a></td><!-- Action -->--}}
 {{--                        </tr>--}}
                         <tr ng-repeat="student in students | filter : studentsFilter" ng-class="{'lightblue':student.id==id}">
-                            <td label="Sl no">@{{ $index + 1 }}</td>
                             <td label="id">@{{ student.id }}</td>
                             <td label="name">@{{ student.name }}</td>
                             <td label="age">@{{ student.age }}</td>
@@ -120,7 +117,7 @@
                             <td >
                                 <a href="javascript:;" ng-click="edit(student)"><i class="material-icons">edit</i></a>
                                 <a href="javascript:;" ng-click="delete(student.id)" ><i class="material-icons">delete</i></a>
-                                <a href="javascript:;" ng-click="show(student.id)"><i class="material-icons">more_vert</i></a>
+                                <a href="javascript:;" ng-click="show(student)"><i class="material-icons">more_vert</i></a>
                             </td>
                         </tr>
                         </tbody>
@@ -132,7 +129,9 @@
 @endsection
 @push('js')
     <script>
-        $('#add_student' ).hide();app.controller('myCtrl', function ($scope, $controller, api, utils) {
+        $('#add_student' ).hide();
+        $('#students_more' ).hide();
+        app.controller('myCtrl', function ($scope, $controller, api, utils) {
             angular.extend(this, $controller('resourceController', {$scope:$scope, api:api, utils:utils}));
             $scope.defaults.updateTableOnSave = true;
             $scope.fetchInitData();
@@ -158,6 +157,25 @@
                 $scope.add_student = angular.copy(item);
                 $('#add_student').fadeIn();
             }
+            $scope.show = async function (student) {
+                $scope.student = student;
+                console.log('id ',$scope.student.id);
+                // $scope.refreshCard();
+                $('#students_more').fadeIn();
+                $('#add_student').hide();
+                $('.ps-container').animate({
+                    scrollTop: $("#students_more").offset().top
+                }, 500);
+                $('.nav-item.details>.nav-link').click();
+                scrollBodyToTop('#students_more')
+            }
+            // $scope.refreshCard = async function () {
+            //     console.log('id ',$scope.id);
+            //     var data = await api.get('api/students/'+$scope.id);
+            //     if (data == null) return;
+            //     $scope.student = data;
+            //     $scope.$apply();
+            // }
         });
     </script>
 @endpush
