@@ -148,8 +148,11 @@
                 $scope.add_student =null;
             }
             $scope.onSaved = function (response){
-                $('#add_student').hide();
-                $scope.add_student =null;
+                if (response.success) {
+                    $('#add_student').hide();
+                    $scope.add_student =null;
+                }
+                else $scope.error_messages = response.data;
             }
             $scope.edit = function (item) {
                 $scope.add_student = angular.copy(item);
