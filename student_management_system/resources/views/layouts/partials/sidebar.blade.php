@@ -35,62 +35,27 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#sidebar-collapse-admin-dashboard">
-                <i class="material-icons">Students</i>
-                <p>Dashboard<b class="caret"></b></p>
+                <i class="material-icons">supervised_user_circle</i>
+                <p>Students<b class="caret"></b></p>
             </a>
             <div class="collapse" id="sidebar-collapse-admin-dashboard">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('dashboard?admin_dashboard&operation_dashboard') }}">
-                            <span class="sidebar-mini">OD</span>
-                            <span class="sidebar-normal">Operation Dashboard</span>
+                        <a class="nav-link" href="{{ url('students?all_students') }}">
+                            <span class="sidebar-mini">AS</span>
+                            <span class="sidebar-normal">All Students</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('dashboard?admin_dashboard&translation_dashboard') }}">
-                            <span class="sidebar-mini">TD</span>
-                            <span class="sidebar-normal">Translation Dashboard</span>
+                        <a class="nav-link" href="{{ url('students?active_students') }}">
+                            <span class="sidebar-mini">AS</span>
+                            <span class="sidebar-normal">Active Students</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('dashboard?admin_dashboard&attestation_dashboard') }}">
-                            <span class="sidebar-mini">AD</span>
-                            <span class="sidebar-normal">Attestation Dashboard</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url('company_documents') }}">
-                <i class="material-icons">library_books</i>
-                <p>Company Documents</p>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#tablesExamples">
-                <i class="material-icons">people</i>
-                <p> Users<b class="caret"></b></p>
-            </a>
-            <div class="collapse" id="tablesExamples">
-                <ul class="nav">
-                    @permits('manage-all-users')
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('users') }}">
-                            <span class="sidebar-mini">AU</span>
-                            <span class="sidebar-normal">All Users</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('staffs') }}">
-                            <span class="sidebar-mini">ST</span>
-                            <span class="sidebar-normal">Staffs</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('translators') }}">
-                            <span class="sidebar-mini">TR</span>
-                            <span class="sidebar-normal">Translators</span>
+                        <a class="nav-link" href="{{ url('students?inactive_students') }}">
+                            <span class="sidebar-mini">IS</span>
+                            <span class="sidebar-normal">Inactive Students</span>
                         </a>
                     </li>
                 </ul>
