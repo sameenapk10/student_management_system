@@ -45,8 +45,7 @@ In this system we have two pages to enter mark details
 
 -Enter from Students Mark page
 
-![image](https://user-images.githubusercontent.com/88235731/205493149-78ec2240-afe8-4448-aa6c-7fa17d3d0a89.png)
-
+![image](https://user-images.githubusercontent.com/88235731/205493227-212f6313-da97-45c2-92d0-70881e3ee7b7.png)
 
 1. Clone this repo
 2. `composer install`
