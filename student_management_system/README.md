@@ -23,6 +23,7 @@ Dashboard gives the discription about the system.
 ## Staff
 
 Through staff page we can add/edit/delete staff to the system.Validation for staff details given.Staffs with designation 'teacher' will listout in the reporting_teacher drop down in students page.
+
 ![image](https://user-images.githubusercontent.com/88235731/205490449-f78aeaa2-9f33-451d-90e3-7cae9e6bead1.png)
 we can add staff by clicking the plus button on top of the table.
 
@@ -30,9 +31,11 @@ we can add staff by clicking the plus button on top of the table.
 
 Students menu have 3 sub menu( All students, Active Students, Inactive Students) based on the current status of the student ( inactive - means the student was resigned).
 In student page we can add/edit/delete students.
-![image](https://user-images.githubusercontent.com/88235731/205490720-bd370923-5621-4cc3-a42e-83106c4fd1b5.png)
+
+![image](https://user-images.githubusercontent.com/88235731/205493088-94fff5a0-e2ad-47d4-abc8-6827e77d83ac.png)
 
 Three dot icon will redirect to 'Student Mark' tab, in which we can add mark details of students.
+
 ![image](https://user-images.githubusercontent.com/88235731/205490760-241e0a5f-2e08-40c9-9a30-1646fb4a6f93.png)
 
 ## Students Mark
@@ -42,7 +45,7 @@ In this system we have two pages to enter mark details
 
 -Enter from Students Mark page
 
-![image](https://user-images.githubusercontent.com/88235731/205490881-a94a2897-1eda-453f-a0f6-b49147527a73.png)
+![image](https://user-images.githubusercontent.com/88235731/205493227-212f6313-da97-45c2-92d0-70881e3ee7b7.png)
 
 1. Clone this repo
 2. `composer install`
