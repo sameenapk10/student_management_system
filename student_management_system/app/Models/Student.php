@@ -13,6 +13,6 @@ class Student extends BaseModel
         'reporting_teacher_id' => 'string',
     ];
     public function reportingTeacher(){
-        return $this->belongsTo('App\Models\user');
+        return $this->belongsTo('App\Models\user','reporting_teacher_id');
     }
 }

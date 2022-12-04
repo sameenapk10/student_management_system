@@ -20,6 +20,9 @@ return new class extends Migration
             $table->text('address')->default('abc123@gmail.com');
             $table->string('gender')->default('Male');
             $table->string('designation')->nullable();
+            $table->string('status')->nullable();
+            $table->string('remarks')->nullable();
+            $table->integer('age')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->default('12345678');
             $table->boolean('is_admin')->default(false);

@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 class UsersController extends ResourceController
 {
     protected $className = User::class;
-    protected $with = ['reportingTeacher:id,name'];
 
     public function getInitData(Request $request)
     {

@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 class StudentsController extends ResourceController
 {
     protected $className = Student::class;
+    protected $with = ['reportingTeacher:id,name'];
 
     public function getInitData(Request $request)
     {
@@ -27,7 +28,7 @@ class StudentsController extends ResourceController
         if ($request->has('all_students')) $this->builder->whereIn('status', ['Active', 'Inactive']);
         if ($request->has('active_students')) $this->builder->where('status', 'Active');
         if ($request->has('inactive_students')) $this->builder->where('status', 'Inactive');
-        return $this->builder->get();
+        return $this->builder->with([ 'reportingTeacher'])->get();
     }
 
     public function store(Request $request)
@@ -44,6 +45,6 @@ class StudentsController extends ResourceController
         $request->validate($validationRules);
         $student->fill($request->all());
         $student->save();
-        return $student;
+        return $student->load(['reportingTeacher']);
     }
 }
