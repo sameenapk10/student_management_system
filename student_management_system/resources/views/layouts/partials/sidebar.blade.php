@@ -1,7 +1,7 @@
 <div class="sidebar-wrapper">
     <div class="user">
         <div class="photo">
-            <img class="avatar" @auth src="{{ Auth::user()->avatar_thumb }}" @else src="{{ asset('uploads/avatar/default.jpg') }}" @endauth/>
+            <img class="avatar" src="{{ asset('uploads/avatar/default.jpg') }}"/>
         </div>
         <div class="user-info">
             <a data-toggle="collapse" href="#collapseExample" class="username">
@@ -10,14 +10,13 @@
             <div class="collapse" id="collapseExample">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('profile') }}">
+                        <a class="nav-link" >
                             <span class="sidebar-mini"> MP </span>
                             <span class="sidebar-normal"> My Profile </span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"  onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
+                        <a class="nav-link">
                             <span class="sidebar-mini"> LO </span>
                             <span class="sidebar-normal"> Log Out </span>
                         </a>

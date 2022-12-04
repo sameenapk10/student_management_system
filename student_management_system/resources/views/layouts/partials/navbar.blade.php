@@ -35,13 +35,9 @@
                     <i class="material-icons">person</i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                    <a class="dropdown-item" href="{{ url('profile') }}">Profile</a>
+                    <a class="dropdown-item">Profile</a>
                     <div class="dropdown-divider"></div>
-{{--                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();--}}
-{{--                            document.getElementById('logout-form').submit();">Log out</a>--}}
-{{--                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-{{--                                @csrf--}}
-{{--                            </form>--}}
+                        <a class="dropdown-item">Log out</a>
                 </div>
             </li>
         </ul>
