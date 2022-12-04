@@ -72,7 +72,7 @@
         <div class="card">
             <div class="card-header card-header-primary">
                 <h4 class="card-title">Student
-                    <span class="badge badge-default">@{{ pager.totalItems }}</span>
+                    <span class="badge badge-default">@{{ students.length }}</span>
                 </h4>
                 <div class="box-tools mr-2 d-none d-sm-block">
                     <button class="btn btn-info" ng-click="addStudent()"><span class="material-icons">add</span></button>
@@ -80,7 +80,6 @@
                 </div>
             </div>
             <div class="card-body">
-                @include('html_components.pagination_links')
                 @include('html_components.table_loader')
                 <div class="table-responsive">
                     <table class="table table-card">

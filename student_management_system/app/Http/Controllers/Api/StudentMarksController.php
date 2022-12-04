@@ -29,6 +29,7 @@ class StudentMarksController extends ResourceController
             'science_mark' => 'required|integer',
             'term' => 'required|string',
         ];
+        abort_if(!$request->student_id ,403,'Please select student');
         $request->validate($validationRules);
         $student_mark->fill($request->all());
         $student_mark->total_mark = $student_mark->maths_mark + $student_mark->history_mark + $student_mark->science_mark;

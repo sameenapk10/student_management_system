@@ -34,11 +34,11 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#sidebar-collapse-admin-dashboard">
+            <a class="nav-link" data-toggle="collapse" href="#sidebar-collapse-students">
                 <i class="material-icons">supervised_user_circle</i>
                 <p>Students<b class="caret"></b></p>
             </a>
-            <div class="collapse" id="sidebar-collapse-admin-dashboard">
+            <div class="collapse" id="sidebar-collapse-students">
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('students?all_students') }}">
@@ -60,6 +60,12 @@
                     </li>
                 </ul>
             </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('student_marks') }}">
+                <i class="material-icons">checklist</i>
+                <p>Student Marks</p>
+            </a>
         </li>
     </ul>
 </div>
