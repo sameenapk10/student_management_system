@@ -16,6 +16,8 @@ This student management web application includes four Menus, such as:
 - Students (All Students, Active Students, Inactive Students).
 - Student Marks.
 
+## Dashboard
+
 Dashboard gives the discription about the system.
 
 ## Staff
