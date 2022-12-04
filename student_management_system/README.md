@@ -53,4 +53,4 @@ In this system we have two pages to enter mark details
 7. Create staff with designation 'teacher' 
 8. Create student 
 9. Add mark corresponding to each student ( by clicking three dot icon in students page)
-10.Students Mark page also available for CRUD operations in students_marks
+10. Students Mark page also available for CRUD operations in students_marks
