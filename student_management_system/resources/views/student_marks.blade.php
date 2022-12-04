@@ -87,7 +87,7 @@
                             <td label="science">@{{ mark.science_mark }}</td>
                             <td label="history">@{{ mark.history_mark }}</td>
                             <td label="term">@{{ mark.term }}</td>
-                            <td label="total">@{{ mark.total_marks }}</td>
+                            <td label="total">@{{ mark.total_mark }}</td>
                             <td label="Date">@{{ mark.created_at  }}</td>
                             <td label="">
                                 <a href="javascript:;" ng-click="edit(mark)"><i class="material-icons">edit</i></a>

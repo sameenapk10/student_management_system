@@ -139,6 +139,7 @@
 
             $scope.addStudent = function () {
                 $('#add_student').fadeIn();
+                $('#students_more' ).hide();
                 $scope.student = null;
                 $scope.add_student = null;
             }
