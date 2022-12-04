@@ -97,21 +97,22 @@
                         </tr>
                         </thead>
                         <tbody>
-{{--                        <tr>--}}
-{{--                            <td label="id"></td>--}}
-{{--                            <td label="Check No"><input type="text" class="form-control" ng-model="add_student.name"></td><!-- name -->--}}
-{{--                            <td label="Amount"><input type="text" class="form-control" ng-model="add_student.age"></td><!-- details -->--}}
-{{--                            <td label="Month"><input type="text" class="form-control" ng-model="add_student.gender"></td><!-- date -->--}}
-{{--                            <td label="Date"><input select-date type="text" ng-model="check_bounce.date"></td><!-- date -->--}}
-{{--                            <td label="Date"><input select-date type="text" ng-model="check_bounce.date"></td><!-- date -->--}}
-{{--                            <td label=""><a href="#" ng-click="save($event, check_bounce)"><i class="material-icons">add_circle</i></a></td><!-- Action -->--}}
-{{--                        </tr>--}}
+                        <tr>
+                            <td label="Id"><input type="text" class="form-control" ng-model="studentsFilter.id"></td>
+                            <td label="name"><input type="text" class="form-control" ng-model="studentsFilter.name"></td>
+                            <td label="age"><input type="text" class="form-control" ng-model="studentsFilter.age"></td>
+                            <td label="gender"><input type="text" class="form-control" ng-model="studentsFilter.gender"></td>
+                            <td label="status"><input type="text" class="form-control" ng-model="studentsFilter.status"></td>
+                            <td label="reporting_teacher"><input type="text" class="form-control" ng-model="studentsFilter.reporting_teacher"></td>
+                            <td label="remark"><input type="text" class="form-control" ng-model="studentsFilter.remarks"></td>
+                            <td label=""><a href="javascript:"><i class="material-icons">search</i></a></td>
+                        </tr>
                         <tr ng-repeat="student in students | filter : studentsFilter" ng-class="{'lightblue':student.id==id}">
                             <td label="id">@{{ student.id }}</td>
                             <td label="name">@{{ student.name }}</td>
                             <td label="age">@{{ student.age }}</td>
                             <td label="gender">@{{ student.gender }}</td>
-                            <td label="gender">@{{ student.status }}</td>
+                            <td label="status">@{{ student.status }}</td>
                             <td label="teacher">@{{ student.reporting_teacher }}</td>
                             <td label="remark">@{{ student.remarks }}</td>
                             <td >
@@ -169,13 +170,6 @@
                 $('.nav-item.details>.nav-link').click();
                 scrollBodyToTop('#students_more')
             }
-            // $scope.refreshCard = async function () {
-            //     console.log('id ',$scope.id);
-            //     var data = await api.get('api/students/'+$scope.id);
-            //     if (data == null) return;
-            //     $scope.student = data;
-            //     $scope.$apply();
-            // }
         });
     </script>
 @endpush

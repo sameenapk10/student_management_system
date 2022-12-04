@@ -22,7 +22,7 @@ class StudentsController extends ResourceController
 
     public function index(Request $request)
     {
-        $this->builder->orderBy('updated_at', 'DESC');
+        $this->builder->orderBy('created_at', 'ASC');
         if ($request->has('all_students')) $this->builder->whereIn('status', ['Active', 'Inactive']);
         if ($request->has('active_students')) $this->builder->where('status', 'Active');
         if ($request->has('inactive_students')) $this->builder->where('status', 'Inactive');

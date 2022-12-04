@@ -1,4 +1,3 @@
-
 <div class="col-md-12" ng-controller="studentsController">
     <div class="card" id="students_more">
         <div class="container">
@@ -17,7 +16,7 @@
                     <div class="col-md-6">Name : @{{ student.name }}</div>
                     <div class="col-md-6">Age : @{{ student.age }}</div>
                     <div class="col-md-6">Status : @{{student.status }}</div>
-                    <div class="col-md-6">Gender : @{{student.nationality }}</div>
+                    <div class="col-md-6">Gender : @{{student.gender }}</div>
                     <div class="col-md-6">Reporting teacher : @{{ student.reporting_teacher }}</div>
                 </div>
             </div>
@@ -27,7 +26,7 @@
                         <div class="nav-tabs-wrapper">
                             <ul class="nav nav-tabs" data-tabs="tabs">
                                 <li class="nav-item details">
-                                    <a class="nav-link " href="#student-mark-tab" data-toggle="tab" ng-click="onTabClicked('student-mark-tab')">
+                                    <a class="nav-link active" href="#student-mark-tab" data-toggle="tab" ng-click="onTabClicked('student-mark-tab')">
                                         <i class="material-icons">home</i>Student Mark</a>
                                 </li>
                             </ul>

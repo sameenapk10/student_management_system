@@ -17,7 +17,22 @@ class StudentMarksController extends ResourceController
     {
         return [
             'terms' => ['One', 'Two'],
-            'student_names' => Student::all()->get(),
+            'student_names' => Student::query()->toDropDown(),
         ];
+    }
+    public function store(Request $request)
+    {
+        $student_mark = StudentMark::findOrNew($request->id);
+        $validationRules = [
+            'maths_mark' => 'required|integer',
+            'history_mark' => 'required|integer',
+            'science_mark' => 'required|integer',
+            'term' => 'required|string',
+        ];
+        $request->validate($validationRules);
+        $student_mark->fill($request->all());
+        $student_mark->total_mark = $student_mark->maths_mark + $student_mark->history_mark + $student_mark->science_mark;
+        $student_mark->save();
+        return $student_mark;
     }
 }

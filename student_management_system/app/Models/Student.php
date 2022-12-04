@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Base\BaseModel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class Student extends Model
+class Student extends BaseModel
 {
     use HasFactory;
     protected $fillable = ['name','age','gender','reporting_teacher','status','remarks'];
