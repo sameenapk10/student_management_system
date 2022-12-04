@@ -27,7 +27,7 @@
                                 <div input-text class="row" model="add_student.age" label="Age"></div>
                             </div>
                             <div class="col-md-6">
-                                <div input-select-text class="row" model="add_student.reporting_teacher" options="data.teachers"></div>
+                                <div input-select-model class="row" model="add_student.reporting_teacher_id" options="data.teachers"></div>
                             </div>
                             <div class="col-md-6">
                                 <div input-text class="row" model="add_student.remarks" label="Remarks"></div>
@@ -102,7 +102,7 @@
                             <td label="age"><input type="text" class="form-control" ng-model="studentsFilter.age"></td>
                             <td label="gender"><input type="text" class="form-control" ng-model="studentsFilter.gender"></td>
                             <td label="status"><input type="text" class="form-control" ng-model="studentsFilter.status"></td>
-                            <td label="reporting_teacher"><input type="text" class="form-control" ng-model="studentsFilter.reporting_teacher"></td>
+                            <td label="reporting_teacher"><input type="text" class="form-control" ng-model="studentsFilter.reporting_teacher.name"></td>
                             <td label="remark"><input type="text" class="form-control" ng-model="studentsFilter.remarks"></td>
                             <td label=""><a href="javascript:"><i class="material-icons">search</i></a></td>
                         </tr>
@@ -112,7 +112,7 @@
                             <td label="age">@{{ student.age }}</td>
                             <td label="gender">@{{ student.gender }}</td>
                             <td label="status">@{{ student.status }}</td>
-                            <td label="teacher">@{{ student.reporting_teacher }}</td>
+                            <td label="teacher">@{{ student.reporting_teacher.name }}</td>
                             <td label="remark">@{{ student.remarks }}</td>
                             <td >
                                 <a href="javascript:;" ng-click="edit(student)"><i class="material-icons">edit</i></a>

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('age');
             $table->char('gender');
             $table->string('status');
-            $table->string('reporting_teacher');
+            $table->string('reporting_teacher_id');
             $table->string('remarks')->nullable();
             $table->timestamps();
         });

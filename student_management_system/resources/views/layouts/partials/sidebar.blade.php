@@ -33,6 +33,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ url('staffs') }}">
+                <i class="material-icons">people</i>
+                <p>Staff</p>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#sidebar-collapse-students">
                 <i class="material-icons">supervised_user_circle</i>
                 <p>Students<b class="caret"></b></p>

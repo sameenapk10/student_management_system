@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Api\Base\ResourceController;
 use App\Http\Controllers\Controller;
 use App\Models\Student;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class StudentsController extends ResourceController
@@ -16,7 +17,7 @@ class StudentsController extends ResourceController
         logger('req', $request->all());
         return [
             'statuses' => ['Active', 'Inactive'],
-            'teachers' => ['abc', 'xyz'],
+            'teachers' => User::query()->where('designation','teacher')->toDropDown(),
         ];
     }
 
@@ -37,7 +38,7 @@ class StudentsController extends ResourceController
             'age' => 'required|integer',
             'gender' => 'required|string',
             'status' => 'required|string',
-            'reporting_teacher' => 'required|string',
+            'reporting_teacher_id' => 'required|string',
             'remarks' => 'nullable|string',
         ];
         $request->validate($validationRules);

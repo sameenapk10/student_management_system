@@ -16,4 +16,5 @@ Route::get('/', function () { return redirect('dashboard'); });
 
 Route::view('students', 'students.students');
 Route::view('dashboard', 'dashboard');
+Route::view('staffs', 'staffs');
 Route::view('student_marks', 'student_marks');

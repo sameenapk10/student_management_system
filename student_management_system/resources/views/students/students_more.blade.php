@@ -17,7 +17,7 @@
                     <div class="col-md-6">Age : @{{ student.age }}</div>
                     <div class="col-md-6">Status : @{{student.status }}</div>
                     <div class="col-md-6">Gender : @{{student.gender }}</div>
-                    <div class="col-md-6">Reporting teacher : @{{ student.reporting_teacher }}</div>
+                    <div class="col-md-6">Reporting teacher : @{{ student.reporting_teacher.name }}</div>
                 </div>
             </div>
             <div class="card card-nav-tabs card-plain mt-5">
